@@ -1,2 +1,4 @@
 # ccio-utils
-ccio utils as a snappy package
+
+#### Purpose:
+  - Prepare & Manage RHEL, Ubuntu, and Fedora hosts for use in CCIO Projects
