@@ -1,4 +1,9 @@
 # ccio-utils
 
 #### Purpose:
-  - Prepare & Manage RHEL, Ubuntu, and Fedora hosts for use in CCIO Projects
+  - Prepare & Manage linux hypervisor layer hosts for use in CCIO Projects
+
+#### Supports:
+  - RHEL
+  - Fedora
+  - Ubuntu
