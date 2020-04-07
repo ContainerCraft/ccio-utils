@@ -1,4 +1,4 @@
-package print_intro
+package print
 
 func print_intro() {
     fmt.Println(`

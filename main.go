@@ -1,11 +1,11 @@
 package main
 import (
        "fmt"
-       "github.io/src/print/intro"
+       "github.io/src/print"
 )
 
 
 func main() {
-    print_intro()
+    print(print_intro())
 }
 
