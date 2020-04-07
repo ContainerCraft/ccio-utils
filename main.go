@@ -1,11 +1,8 @@
 package main
-import (
-       "fmt"
-       "github.io/src/print"
-)
 
+import "github.com/containercraft/p1-gotools/src/text"
 
 func main() {
-    print(print_intro())
+    text.printIntro()
 }
 

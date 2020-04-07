@@ -1,3 +1,3 @@
-module github.com/tcynic/p1-gotools
+module github.com/containercraft/p1-gotools
 
-go 1.14
+go 1.12
