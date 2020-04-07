@@ -1,3 +1,3 @@
-module github.com/containercraft/p1-gotools/src/text
+module github.com/containercraft/p1-gotools
 
 go 1.12
