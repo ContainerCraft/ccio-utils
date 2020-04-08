@@ -12,7 +12,7 @@ podman run \
     --volume $(pwd):/root/dev \
     --volume ~/.ssh:/root/.ssh \
     --volume ~/.gitconfig:/root/.gitconfig \
-  containercraft/ccio-golang 
+  containercraft/ccio-golang:ubi8 
 ```
 ```
 go run main.go
