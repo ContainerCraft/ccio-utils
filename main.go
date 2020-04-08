@@ -1,8 +1,9 @@
 package main
 
 import (
-  "os"
 	"fmt"
+	"log"
+	"os"
 
 	"github.com/containercraft/p1-gotools/src/confirm"
 	"github.com/containercraft/p1-gotools/src/prompt"
@@ -11,22 +12,32 @@ import (
 )
 
 var clear = "\033[H\033[2J"
+
 func main() {
 
-    // clear screen
-    print(clear)
+	// Start logging file
+	p, err := os.OpenFile("error.log", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer p.Close()
+	log.SetOutput(p)
+	log.Println("Application started")
 
-    // Print Intro TexBlock to Screen
-    text.PrintIntro()
-    fmt.Print("    Continue? (Yes/No): ")
-    runContinue := confirm.PromptContinue()
-    if runContinue != true {
-	    os.Exit(1)
-    }
+	// clear screen
+	print(clear)
 
-    // Collect VPC {name,cluster subdomain,domain}
-    prompt.VarsVpc()
-  
-    // Write environment variables to file
-  	write.StoreEnv()
+	// Print Intro TexBlock to Screen
+	text.PrintIntro()
+	fmt.Print("    Continue? (Yes/No): ")
+	runContinue := confirm.PromptContinue()
+	if runContinue != true {
+		os.Exit(1)
+	}
+
+	// Collect VPC {name,cluster subdomain,domain}
+	prompt.VarsVpc()
+
+	// Write environment variables to file
+	write.StoreEnv()
 }
