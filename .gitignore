@@ -5,3 +5,4 @@
 go
 environment
 rm contrib/.*
+error.log

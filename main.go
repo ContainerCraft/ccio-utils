@@ -40,4 +40,5 @@ func main() {
 
 	// Write environment variables to file
 	write.StoreEnv()
+	log.Println("Application closed")
 }
