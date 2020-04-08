@@ -13,3 +13,6 @@ podman run \
     --volume ~/.bashrc:/opt/app-root/src/.bashrc \
   registry.access.redhat.com/ubi8/go-toolset bash
 ```
+```
+go run main.go
+```
