@@ -3,14 +3,14 @@ package confirm
 import (
 	"fmt"
 	"log"
-  	"os"
+//	"os"
 //	"sort"
 )
 
 // PromptContinue uses Scanln to parse user input. A user must type in "yes" or "no" and
 // then press enter. If the input is not recognized, it will ask again. The function does not return
 // until it gets a valid response from the user.
-var msgPrint = "    Continue? (Yes/No): "
+var msgPrint = "    (Yes/No): "
 
 func PromptContinue() bool {
 	var response string
@@ -25,7 +25,7 @@ func PromptContinue() bool {
 	} else if containsString(nokayResponses, response) {
 		return false
 	} else {
-		fmt.Println("Please type yes or no and then press enter:")
+		fmt.Println("    Please type yes or no and then press enter:")
 		return PromptContinue()
 	}
 }
