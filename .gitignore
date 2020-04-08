@@ -3,4 +3,5 @@
 .ssh
 .cache
 go
+environment
 rm contrib/.*

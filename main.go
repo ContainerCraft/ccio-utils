@@ -1,14 +1,13 @@
 package main
 
 import (
+  "os"
+	"fmt"
 
-        "os"
-        "fmt"
-
-        "github.com/containercraft/p1-gotools/src/text"
-        "github.com/containercraft/p1-gotools/src/prompt"
-        "github.com/containercraft/p1-gotools/src/confirm"
-
+	"github.com/containercraft/p1-gotools/src/confirm"
+	"github.com/containercraft/p1-gotools/src/prompt"
+	"github.com/containercraft/p1-gotools/src/text"
+	"github.com/containercraft/p1-gotools/src/write"
 )
 
 var clear = "\033[H\033[2J"
@@ -27,4 +26,7 @@ func main() {
 
     // Collect VPC {name,cluster subdomain,domain}
     prompt.VarsVpc()
+  
+    // Write environment variables to file
+  	write.StoreEnv()
 }
