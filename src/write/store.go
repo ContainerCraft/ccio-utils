@@ -51,4 +51,5 @@ func CreateEnv() {
 
 	// Working Variables
 	os.Setenv("DIRBASE", "/root/PlatformOne")
+	os.Setenv("DIRARTIFACTS", "")
 }

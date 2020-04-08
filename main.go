@@ -27,6 +27,8 @@ func main() {
 	// clear screen
 	print(clear)
 
+	fmt.Println("  Welcome to the ContainerOne OpenShift Artifact Prep Utility")
+
 	// Print Intro TexBlock to Screen
 	text.PrintIntro()
 	fmt.Print("    Continue? (Yes/No): ")
