@@ -7,8 +7,9 @@ import "github.com/containercraft/p1-gotools/src/confirm"
 import "fmt"
 import "os"
 
+var clear = "\033[H\033[2J"
 func main() {
-    print("\033[H\033[2J")
+    print(clear)
     text.PrintIntro()
     fmt.Print("    Continue? (Yes/No): ")
     runContinue := confirm.PromptContinue()
@@ -17,4 +18,3 @@ func main() {
     }
     prompt.VarsVpc()
 }
-
