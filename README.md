@@ -9,9 +9,9 @@ podman run \
     --rm \
     --name p1-gotools \
     --hostname p1-gotools \
-    --volume $(pwd):/opt/app-root/src \
-    --volume ~/.bashrc:/opt/app-root/src/.bashrc \
-  registry.access.redhat.com/ubi8/go-toolset bash
+    --volume $(pwd):/root/dev \
+    --volume ~/.ssh:/root/.ssh \
+  containercraft/ccio-golang bash
 ```
 ```
 go run main.go
