@@ -1,7 +1,7 @@
 package write
 
 import (
-	"fmt"
+	"log"
 	"os"
 )
 
@@ -9,7 +9,7 @@ import (
 func StoreEnv() {
 	f, err := os.Create("environment")
 	if err != nil {
-		fmt.Println(err)
+		log.Fatal(err)
 		return
 	}
 	defer f.Close()
@@ -23,14 +23,14 @@ func StoreEnv() {
 	f.WriteString("DIRBASE=" + os.Getenv("DIRBASE") + "\n")
 
 	if err != nil {
-		fmt.Println(err)
+		log.Fatal(err)
 		f.Close()
 		return
 	}
 
 	err = f.Close()
 	if err != nil {
-		fmt.Println(err)
+		log.Fatal(err)
 		return
 	}
 }
@@ -51,4 +51,5 @@ func CreateEnv() {
 
 	// Working Variables
 	os.Setenv("DIRBASE", "/root/PlatformOne")
+	os.Setenv("DIRARTIFACTS", "")
 }
