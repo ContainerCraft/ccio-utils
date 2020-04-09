@@ -13,6 +13,6 @@ golang dev tool for p1 init script utilities
 ```
   3. Run program
 ```
- go run main.go
+ go run p1.go
 ```
 [podman]:https://podman.io/
