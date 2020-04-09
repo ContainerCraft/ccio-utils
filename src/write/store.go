@@ -5,6 +5,8 @@ import (
 	"os"
 )
 
+//var dirBase = os.Getenv("HOME") + "PlatformOne"
+
 // StoreEnv writes the Environtment variables to a file (environment)
 func StoreEnv() {
 	f, err := os.Create("environment")
@@ -13,14 +15,15 @@ func StoreEnv() {
 		return
 	}
 	defer f.Close()
-	f.WriteString("CLUSTERDOMAIN=" + os.Getenv("CLUSTERDOMAIN") + "\n")
-	f.WriteString("NAMECLUSTER=" + os.Getenv("NAMECLUSTER") + "\n")
-	f.WriteString("NAMEDOMAIN=" + os.Getenv("NAMEDOMAIN") + "\n")
-	f.WriteString("NAMEVPC=" + os.Getenv("NAMEVPC") + "\n")
+	f.WriteString("dirBase=" + os.Getenv("HOME") + "/PlatformOne" + "\n")
+	f.WriteString("dirArtifacts=" + os.Getenv("HOME") + "/PlatformOne" + os.Getenv("dirArtifacts") + "\n")
+	f.WriteString("nameVpc=" + os.Getenv("nameVpc") + "\n")
+	f.WriteString("nameCluster=" + os.Getenv("nameCluster") + "\n")
+	f.WriteString("nameDomain=" + os.Getenv("nameDomain") + "\n")
+	f.WriteString("clusterDomain=" + os.Getenv("clusterDomain") + "\n")
 	f.WriteString("AWSREGION1=" + os.Getenv("awsRegion1") + "\n")
 	f.WriteString("AWSREGION2=" + os.Getenv("awsRegion2") + "\n")
 	f.WriteString("AWSREGION3=" + os.Getenv("awsRegion3") + "\n")
-	f.WriteString("DIRBASE=" + os.Getenv("DIRBASE") + "\n")
 
 	if err != nil {
 		log.Fatal(err)
@@ -38,10 +41,10 @@ func StoreEnv() {
 // CreateEnv writes defaults to the environment variables
 func CreateEnv() {
 	// User Defined Variables
-	os.Setenv("CLUSTERDOMAIN", "")
-	os.Setenv("NAMECLUSTER", "")
-	os.Setenv("NAMEDOMAIN", "")
-	os.Setenv("NAMEVPC", "")
+	os.Setenv("clusterDomain", "")
+	os.Setenv("nameCluster", "")
+	os.Setenv("nameDomain", "")
+	os.Setenv("nameVpc", "")
 
 	// Enabled Regions
 	// Hard coded for now
@@ -50,6 +53,6 @@ func CreateEnv() {
 	os.Setenv("awsRegion3", "us-gov-west-1")
 
 	// Working Variables
-	os.Setenv("DIRBASE", "/root/PlatformOne")
-	os.Setenv("DIRARTIFACTS", "")
+	os.Setenv("dirBase", os.Getenv("HOME") + "/" + "PlatformOne")
+	os.Setenv("dirArtifacts", "")
 }

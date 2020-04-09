@@ -1,14 +1,14 @@
 package main
 
 import (
+	"os"
 	"fmt"
 	"log"
-	"os"
 
-	"github.com/containercraft/p1-gotools/src/confirm"
-	"github.com/containercraft/p1-gotools/src/prompt"
 	"github.com/containercraft/p1-gotools/src/text"
 	"github.com/containercraft/p1-gotools/src/write"
+	"github.com/containercraft/p1-gotools/src/prompt"
+	"github.com/containercraft/p1-gotools/src/confirm"
 )
 
 var clear = "\033[H\033[2J"
@@ -22,12 +22,11 @@ func main() {
 	}
 	defer p.Close()
 	log.SetOutput(p)
-	log.Println("Application started")
+	log.Println("    Application started")
 
 	// clear screen
-	print(clear)
-
-	fmt.Println("  Welcome to the ContainerOne OpenShift Artifact Prep Utility")
+	fmt.Println(clear)
+	fmt.Println("    Welcome to the ContainerOne OpenShift Artifact Prep Utility")
 
 	// Print Intro TexBlock to Screen
 	text.PrintIntro()
@@ -42,5 +41,5 @@ func main() {
 
 	// Write environment variables to file
 	write.StoreEnv()
-	log.Println("Application closed")
+	log.Println("    Application closed")
 }
