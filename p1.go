@@ -1,14 +1,14 @@
 package main
 
 import (
-	"os"
 	"fmt"
 	"log"
+	"os"
 
+	"github.com/containercraft/p1-gotools/src/confirm"
+	"github.com/containercraft/p1-gotools/src/prompt"
 	"github.com/containercraft/p1-gotools/src/text"
 	"github.com/containercraft/p1-gotools/src/write"
-	"github.com/containercraft/p1-gotools/src/prompt"
-	"github.com/containercraft/p1-gotools/src/confirm"
 )
 
 var clear = "\033[H\033[2J"
@@ -24,13 +24,15 @@ func main() {
 	log.SetOutput(p)
 	log.Println("    Application started")
 
+	write.CreateEnv()
+
 	// clear screen
 	fmt.Println(clear)
 	fmt.Println("    Welcome to the ContainerOne OpenShift Artifact Prep Utility")
 
 	// Print Intro TexBlock to Screen
 	text.PrintIntro()
-	fmt.Print("    Continue? (Yes/No): ")
+	// Prompt user to continue. If no quit
 	runContinue := confirm.PromptContinue()
 	if runContinue != true {
 		os.Exit(1)
