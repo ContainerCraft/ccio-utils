@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/containercraft/p1-gotools/src/collect"
 	"github.com/containercraft/p1-gotools/src/confirm"
 	"github.com/containercraft/p1-gotools/src/prompt"
 	"github.com/containercraft/p1-gotools/src/text"
@@ -23,6 +24,8 @@ func main() {
 	defer p.Close()
 	log.SetOutput(p)
 	log.Println("    Application started")
+
+	collect.Info()
 
 	write.CreateEnv()
 
