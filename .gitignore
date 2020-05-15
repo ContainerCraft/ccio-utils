@@ -1,0 +1,8 @@
+.bash_history
+.bashrc
+.ssh
+.cache
+go
+environment
+rm contrib/.*
+error.log
