@@ -12,7 +12,6 @@
 ```
   3. Run program
 ```
-```
  go run p1.go
 ```
 [podman]:https://podman.io/
