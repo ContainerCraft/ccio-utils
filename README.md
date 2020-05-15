@@ -1,4 +1,4 @@
-# ccio utilities package
+# CCIO Utilities Package
 This package provides the user enablement capabilities utilized across the CCIO & MSIO ecosystem
 ## Development Environment:
 >   Requires [podman]
