@@ -1,5 +1,5 @@
 # ccio utilities package
-
+This package provides the user enablement capabilities utilized across the CCIO & MSIO ecosystem
 ## Development Environment:
 >   Requires [podman]
   1. Clone Repo
@@ -15,3 +15,5 @@
  go run p1.go
 ```
 [podman]:https://podman.io/
+[CCIO]:https://github.com/containercraft
+[MSIO]:https://github.com/ministackio
