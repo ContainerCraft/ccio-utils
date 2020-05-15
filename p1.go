@@ -5,6 +5,10 @@ import (
 	"log"
 	"os"
 
+<<<<<<< HEAD
+=======
+	"github.com/containercraft/p1-gotools/src/collect"
+>>>>>>> fb675968620ed4f816ff305bf774045b9a609def
 	"github.com/containercraft/p1-gotools/src/confirm"
 	"github.com/containercraft/p1-gotools/src/prompt"
 	"github.com/containercraft/p1-gotools/src/text"
@@ -24,6 +28,11 @@ func main() {
 	log.SetOutput(p)
 	log.Println("    Application started")
 
+<<<<<<< HEAD
+=======
+	collect.Info()
+
+>>>>>>> fb675968620ed4f816ff305bf774045b9a609def
 	write.CreateEnv()
 
 	// clear screen
